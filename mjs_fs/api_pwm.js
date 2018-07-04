@@ -17,3 +17,13 @@ let PWM = {
   // we use it instead of assigning a new one.
   set: ffi('bool mgos_pwm_set(int, int, float)'),
 };
+
+load('api_gpio.js');
+let red = 4;
+let green = 16;
+let blue = 5;
+let white = 19;
+GPIO.set_mode(red,GPIO.MODE_OUTPUT);
+GPIO.set_mode(green,GPIO.MODE_OUTPUT);
+GPIO.set_mode(blue,GPIO.MODE_OUTPUT);
+GPIO.set_mode(white,GPIO.MODE_OUTPUT);
